@@ -4,12 +4,13 @@ import { HomeComponent } from './home/home.component';
 import { UsuarioComponent } from './usuario/usuario.component';
 
 const routes: Routes = [
-  { path: 'home', 
-    component: HomeComponent
+  { 
+    path: 'home',
+    loadChildren: './home/home.module#HomeModule'
   },
   { 
     path: 'usuario', 
-    component: UsuarioComponent
+    loadChildren: './usuario/usuario.module#UsuarioModule'
   },
   { 
     path: '', 
@@ -19,7 +20,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {useHash: true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

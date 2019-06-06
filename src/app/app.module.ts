@@ -13,8 +13,6 @@ import { UsuarioComponent } from './usuario/usuario.component';
     AppComponent,
     MenuComponent,
     FooterComponent,
-    HomeComponent,
-    UsuarioComponent
   ],
   imports: [
     BrowserModule,
